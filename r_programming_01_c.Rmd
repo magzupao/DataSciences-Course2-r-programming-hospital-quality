@@ -1,26 +1,24 @@
 ---
-title: "Programming assignment 3 instructions hospital quality"
+title: "R programming, Hospital Quality – Data Science"
 author: "Marco Guado"
 date: "October 2016"
 output: html_document
 ---
 ![](magz.png)  
 
+## Data Science Specialization - course 2
+
 ## Objective  
 Report quality of care at more than 4,000 Medicare-certified hospitals in the US This data set essentially covers all major hospitals in the United States.  
 
 
 ## Introduction  
-To make the report we will use three data files:
-• Care outcome measures.csv: Contains information on 30-day mortality and readmission rates for heart attacks, heart failure, and pneumonia for more than 4,000 hospitals.
-• hospital-data.csv: Contains information about each hospital.
-• Hospital_Revised_Flatfiles.pdf: Descriptions of the variables of each file (ie the codebook).  
+To make the report we will use three data files:  
+• Care outcome measures.csv: Contains information on 30-day mortality and readmission rates for heart attacks, heart failure, and pneumonia for more than 4,000 hospitals.  
+• hospital-data.csv: Contains information about each hospital.  
+          
+Hospital_Revised_Flatfiles.pdf - description of the variables used in the *.csv files.  
   
-A description of the variables in each of the files is found in the included PDF file named Hospital_Revised_Flatfiles.pdf.   
-
-This document contains information about many other files that are not included with this schedule assignment. You will want to focus on the variables for Number 19 ("Outcome of Care Measures.csv") and Number 11 ("Hospital Data.csv"). It may be helpful to print this document (at least the pages for Tables 19 and 11) to have at your side while working on this assignment. In particular, the number of variables in each table indicates column indices in each table (ie "Hospital Name" is column 2 in the table of outcome-of-care-measures.csv).  
-  
-
 ## Development process:  
   
 1.	Setting up a working environment
@@ -28,8 +26,6 @@ This document contains information about many other files that are not included 
 ```{r, echo=TRUE}
 # we will use the RStudio IDE
 #setwd(“create a work folder”)
-
-getwd()
 
 if ( !file.exists("rprog_data_ProgAssignment3-data.zip")) {
   url.file<-"https://d396qusza40orc.cloudfront.net/rprog%2Fdata%2FProgAssignment3-data.zip"
@@ -43,7 +39,7 @@ list.files()
 ```
   
 2.	We explore the data  
-To view the content, format and perform tests.  
+To view the content, format the data and perform tests.  
 ```{r, echo=TRUE}  
 # load the contents of the file into the variable file.temp.
 data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
@@ -55,7 +51,7 @@ nrow(data)
 head(data[,c(2,7,11)])
 ```
   
-3. Analisamos los datos  
+3. We analyzed the data 
 
 3.1.  Plot the 30-day mortality rates for heart attack  
   

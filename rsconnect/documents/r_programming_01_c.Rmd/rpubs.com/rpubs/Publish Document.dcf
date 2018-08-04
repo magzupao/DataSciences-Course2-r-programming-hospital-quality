@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/409949/84c050e521f541d0801161ffee71175d
+bundleId: https://api.rpubs.com/api/v1/document/409949/84c050e521f541d0801161ffee71175d
+url: http://rpubs.com/magzupao/409949/edit
+when: 1533405739.4278
